@@ -3,7 +3,7 @@ type PropType<TObj, TProp extends keyof TObj> = TObj[TProp];
 export default class LayoutsPlugin {
   id = "layouts";
   public settings = {
-    processBackgrounds: true,
+    extractBackgrounds: true,
     backgroundGradient: undefined,
     layoutsDir: "html",
     stripUnusedPlaceholders: true,
@@ -326,7 +326,7 @@ export default class LayoutsPlugin {
     layout: HTMLElement;
     slide: HTMLElement;
   }) {
-    if (this.settings.processBackgrounds) {
+    if (this.settings.extractBackgrounds) {
       this.processBackground({ slide, layout, deckWidth, deckHeight });
     }
     if (this.settings.backgroundGradient) {
