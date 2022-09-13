@@ -74,3 +74,7 @@ With this:
 ## Caveats
 
 There's a lot of unsupported features, like images, graphs, and so on. The styling might be off as well. Use at your own risk.
+
+## Samples 
+
+https://heavymetaldev.com/powerpoint-to-reveal/samples/export/
