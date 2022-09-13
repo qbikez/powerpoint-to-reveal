@@ -1,0 +1,11 @@
+{
+  "name": "samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.esm.js",
+  "scripts": {
+    "build": "cd ../plugins/layouts/ && npm run build && cp dist/layouts.js ../../samples/plugins/"
+  },
+  "author": "",
+  "license": "ISC"
+}
