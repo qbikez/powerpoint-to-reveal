@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ofice:document-styles xmlns:ofice="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
+    <office:styles xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
+        <style:style style:family="drawing-page" style:name="a67" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="a66" style:repeat="stretch" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" />
+        </style:style>
+        <style:style style:family="graphic" style:name="a68" style:parent-style-name="Graphics" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties draw:fill="none" draw:stroke="none" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a72" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="bottom" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" style:shrink-to-fit="true" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a71" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a69" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:text-transform="uppercase" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri Light" fo:font-size="0.66667in" style:font-size-asian="0.66667in" style:font-size-complex="0.66667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a70" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:text-transform="uppercase" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri Light" fo:font-size="0.66667in" style:font-size-asian="0.66667in" style:font-size-complex="0.66667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a76" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" style:shrink-to-fit="true" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a75" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0.13889in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a73" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:text-transform="uppercase" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a74" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:text-transform="uppercase" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a81" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a80" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a77" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.13889in" style:font-size-asian="0.13889in" style:font-size-complex="0.13889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a79" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.13889in" style:font-size-asian="0.13889in" style:font-size-complex="0.13889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a84" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a83" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a82" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.13889in" style:font-size-asian="0.13889in" style:font-size-complex="0.13889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a87" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a86" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a85" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ffffff" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.13889in" style:font-size-asian="0.13889in" style:font-size-complex="0.13889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="drawing-page" style:name="a119" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a90" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a89" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a88" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a95" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a94" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a91" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a93" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a96" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="solid" svg:stroke-width="0.01389in" svg:stroke-color="#000000" svg:stroke-opacity="100%" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a111" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a98" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a97" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <text:list-style style:name="a101" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a101" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <style:style style:family="paragraph" style:name="a100" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.5in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a99" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <text:list-style style:name="a104" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a104" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a104" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <style:style style:family="paragraph" style:name="a103" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="1in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a102" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <text:list-style style:name="a107" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a107" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a107" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a107" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <style:style style:family="paragraph" style:name="a106" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="1.5in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a105" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <text:list-style style:name="a110" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a110" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a110" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a110" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <text:list-style style:name="a110" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+            <text:list-level-style-number text:level="1" style:num-format="">
+                <style:list-level-properties text:space-before="0in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="2" style:num-format="">
+                <style:list-level-properties text:space-before="0.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="3" style:num-format="">
+                <style:list-level-properties text:space-before="1in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="4" style:num-format="">
+                <style:list-level-properties text:space-before="1.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="5" style:num-format="">
+                <style:list-level-properties text:space-before="2in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="6" style:num-format="">
+                <style:list-level-properties text:space-before="2.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="7" style:num-format="">
+                <style:list-level-properties text:space-before="3in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="8" style:num-format="">
+                <style:list-level-properties text:space-before="3.5in" />
+            </text:list-level-style-number>
+            <text:list-level-style-number text:level="9" style:num-format="">
+                <style:list-level-properties text:space-before="4in" />
+            </text:list-level-style-number>
+        </text:list-style>
+        <style:style style:family="paragraph" style:name="a109" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="2in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a108" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a114" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="bottom" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a113" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a112" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="presentation" style:name="a118" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="bottom" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+            <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+        </style:style>
+        <style:style style:family="paragraph" style:name="a117" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:paragraph-properties fo:line-height="100%" fo:text-align="right" style:tab-stop-distance="0.5in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+                <style:tab-stops />
+            </style:paragraph-properties>
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a115" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+        <style:style style:family="text" style:name="a116" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+            <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.16667in" style:font-size-asian="0.16667in" style:font-size-complex="0.16667in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" />
+        </style:style>
+    </office:styles>
+</ofice:document-styles>
