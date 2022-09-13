@@ -29,4 +29,15 @@ This tool can convert powerpoint **layouts** to html that can be used in reveal 
     });
     revealOptions.plugins.push(layouts);
     ```
-2. 
+
+    (See `samples/init.js` for a full sample).
+
+2. In the reveal presentation, add `data-layout` attribute to each slide and point it to HTML layout file, i.e.:
+
+    ```
+    <!-- .slide: data-layout="celestial/001_Master1-Layout1-title-Title-Slide" -->
+
+    # My awesome presentation
+    ```
+
+    (See `samples/celestial.md` for a full sample).
