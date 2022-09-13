@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layouts plugin front page layout when theres only one header tag puts h1 into title placeholder 1`] = `
+<body
+  data-background-gradient="linear-gradient(to bottom right, #201d52, #210d40)"
+  data-background-image="url(media/image25.png)"
+>
+  
+
+  <div
+    class="a331"
+    name="Master1-Layout5-cust-Front-Page"
+    page-layout-name="pageLayout1"
+    style=""
+  >
+    
+
+    <div
+      class="a332"
+      id="id57"
+      name="Picture 16"
+      rel-height="scale"
+      rel-width="scale"
+      style="left: 0px; top: 0px; width: 1280px; height: 720px; position: absolute; "
+    >
+      
+
+
+    </div>
+    
+
+    <div
+      class="a335"
+      id="id58"
+      name="Title 1"
+      placeholder="false"
+      presentation-class="title"
+      replaced="true"
+      style="left: 183px; top: 235px; width: 727px; height: 142px; position: absolute; "
+    >
+      
+
+      <p
+        class="a334"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        I'm groot
+      </p>
+      
+
+    </div>
+    
+
+
+
+    <div
+      class="a346"
+      id="id62"
+      name="Freeform 7"
+      style="left: 196px; top: 158px; width: 30px; height: 30px; position: absolute; "
+    >
+      
+
+      <p
+        class="a345"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a344"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a349"
+      id="id63"
+      name="Freeform 8"
+      style="left: 203px; top: 170px; width: 24px; height: 36px; position: absolute; "
+    >
+      
+
+      <p
+        class="a348"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a347"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a352"
+      id="id64"
+      name="Freeform 9"
+      style="left: 182px; top: 169px; width: 36px; height: 26px; position: absolute; "
+    >
+      
+
+      <p
+        class="a351"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a350"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a355"
+      id="id65"
+      name="Freeform 10"
+      style="left: 235px; top: 168px; width: 24px; height: 26px; position: absolute; "
+    >
+      
+
+      <p
+        class="a354"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a353"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a358"
+      id="id66"
+      name="Freeform 11"
+      style="left: 260px; top: 174px; width: 20px; height: 20px; position: absolute; "
+    >
+      
+
+      <p
+        class="a357"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a356"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a361"
+      id="id67"
+      name="Freeform 15"
+      style="left: 280px; top: 174px; width: 20px; height: 20px; position: absolute; "
+    >
+      
+
+      <p
+        class="a360"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a359"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a364"
+      id="id68"
+      name="Freeform 17"
+      style="left: 300px; top: 174px; width: 18px; height: 20px; position: absolute; "
+    >
+      
+
+      <p
+        class="a363"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a362"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a367"
+      id="id69"
+      name="Freeform 18"
+      style="left: 319px; top: 170px; width: 14px; height: 24px; position: absolute; "
+    >
+      
+
+      <p
+        class="a366"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a365"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a370"
+      id="id70"
+      name="Freeform 19"
+      style="left: 334px; top: 167px; width: 6px; height: 28px; position: absolute; "
+    >
+      
+
+      <p
+        class="a369"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a368"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a373"
+      id="id71"
+      name="Freeform 20"
+      style="left: 340px; top: 167px; width: 6px; height: 28px; position: absolute; "
+    >
+      
+
+      <p
+        class="a372"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a371"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a376"
+      id="id72"
+      name="Freeform 21"
+      style="left: 348px; top: 174px; width: 20px; height: 20px; position: absolute; "
+    >
+      
+
+      <p
+        class="a375"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a374"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+    <div
+      class="a379"
+      id="id73"
+      name="Freeform 22"
+      style="left: 368px; top: 174px; width: 20px; height: 20px; position: absolute; "
+    >
+      
+
+      <p
+        class="a378"
+        class-names=""
+        cond-style-name=""
+        style=""
+      >
+        
+
+        <span
+          class="a377"
+          class-names=""
+          style=""
+        >
+          
+
+
+        </span>
+        
+
+      </p>
+      
+
+    </div>
+    
+
+  </div>
+  
+
+
+
+
+</body>
+`;
