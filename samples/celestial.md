@@ -16,7 +16,11 @@ center: false # prevent slides from being centered vertically. We have own css t
 
 <!-- .slide: data-layout="celestial/008_Master1-Layout8-objTx-Content-with-Caption" -->
 
-# slide no 2
+# My title
 
-* something
-* else
+:::
+This goes together.
+
+With this:
+* list item
+:::

@@ -41,3 +41,36 @@ This tool can convert powerpoint **layouts** to html that can be used in reveal 
     ```
 
     (See `samples/celestial.md` for a full sample).
+
+## Content matching
+
+The plugin looks at content placeholders extracted from PowerPoint layout and tries to put your slide elements there.
+To group a few elements into one placeholder, you can enclose them in a <div>, either directly:
+
+```
+# My title
+
+<div>
+This goes together.
+
+With this:
+* list item
+</div>
+```
+
+Or using [markdown-it-div](https://www.npmjs.com/package/markdown-it-div) format:
+
+```
+# My title
+
+:::
+This goes together.
+
+With this:
+* list item
+:::
+```
+
+## Caveats
+
+There's a lot of unsupported features, like images, graphs, and so on. The styling might be off as well. Use at your own risk.
