@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style:master-page style:name="Master1-Layout14-cust-Quote-Name-Card" style:page-layout-name="pageLayout1" draw:style-name="a872" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+    <draw:frame draw:id="id95" draw:style-name="a873" draw:name="Picture 10" svg:x="0in" svg:y="0in" svg:width="13.32986in" svg:height="7.49805in" style:rel-width="scale" style:rel-height="scale" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+        <draw:image xlink:href="media/image4.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        <svg:title />
+        <svg:desc>Celestia-R1---OverlayContentHD.png</svg:desc>
+    </draw:frame>
+    <draw:frame draw:id="id96" draw:style-name="a876" draw:name="TextBox 12" svg:x="11.19627in" svg:y="3in" svg:width="0.66667in" svg:height="0.63952in" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a875" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a874" text:class-names="">”</text:span>
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id97" draw:style-name="a879" draw:name="TextBox 13" svg:x="0.53398in" svg:y="0.90041in" svg:width="0.66667in" svg:height="0.63952in" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a878" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a877" text:class-names="">“</text:span>
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id98" presentation:style-name="a883" draw:name="Title 1" svg:x="1.08516in" svg:y="0.66667in" svg:width="10.44444in" svg:height="3in" presentation:class="title" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a882" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a880" text:class-names="">Click to edit Master title style</text:span>
+                <text:span text:style-name="a881" text:class-names="" />
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id99" presentation:style-name="a887" draw:name="Text Placeholder 9" svg:x="0.75in" svg:y="4.25in" svg:width="11.08425in" svg:height="0.97222in" presentation:class="outline" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:list text:style-name="a886" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:list-item>
+                    <text:p text:style-name="a885" text:class-names="" text:cond-style-name="">
+                        <text:span text:style-name="a884" text:class-names="">Click to edit Master text styles</text:span>
+                    </text:p>
+                </text:list-item>
+            </text:list>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id100" presentation:style-name="a891" draw:name="Text Placeholder 2" svg:x="0.75in" svg:y="5.22222in" svg:width="11.08425in" svg:height="1.11111in" presentation:class="outline" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:list text:style-name="a890" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:list-item>
+                    <text:p text:style-name="a889" text:class-names="" text:cond-style-name="">
+                        <text:span text:style-name="a888" text:class-names="">Click to edit Master text styles</text:span>
+                    </text:p>
+                </text:list-item>
+            </text:list>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id101" presentation:style-name="a896" draw:name="Date Placeholder 3" svg:x="9.39377in" svg:y="6.42014in" svg:width="1.75in" svg:height="0.41319in" presentation:class="date-time" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a895" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a892" text:class-names="">
+                    <text:date text:fixed="false" style:data-style-name="a893">6/12/2019</text:date>
+                </text:span>
+                <text:span text:style-name="a894" text:class-names="" />
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id102" presentation:style-name="a899" draw:name="Footer Placeholder 4" svg:x="0.75in" svg:y="6.42014in" svg:width="8.56043in" svg:height="0.41319in" presentation:class="footer" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a898" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a897" text:class-names="" />
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <draw:frame draw:id="id103" presentation:style-name="a902" draw:name="Slide Number Placeholder 5" svg:x="11.2271in" svg:y="6.42014in" svg:width="0.60276in" svg:height="0.41319in" presentation:class="page-number" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:text-box>
+            <text:p text:style-name="a901" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                <text:span text:style-name="a900" text:class-names="">
+                    <text:page-number style:num-format="1" text:fixed="false">‹#›</text:page-number>
+                </text:span>
+            </text:p>
+        </draw:text-box>
+        <svg:title />
+        <svg:desc />
+    </draw:frame>
+    <presentation:notes style:page-layout-name="pageLayout2" draw:style-name="a934" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0">
+        <draw:frame draw:id="id5" presentation:style-name="a905" draw:name="Header Placeholder 1" svg:x="0in" svg:y="0in" svg:width="3.25in" svg:height="0.50174in" presentation:class="header" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <draw:text-box>
+                <text:p text:style-name="a904" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:span text:style-name="a903" text:class-names="" />
+                </text:p>
+            </draw:text-box>
+            <svg:title />
+            <svg:desc />
+        </draw:frame>
+        <draw:frame draw:id="id6" presentation:style-name="a910" draw:name="Date Placeholder 2" svg:x="4.24826in" svg:y="0in" svg:width="3.25in" svg:height="0.50174in" presentation:class="date-time" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <draw:text-box>
+                <text:p text:style-name="a909" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:span text:style-name="a906" text:class-names="">
+                        <text:date text:fixed="false" style:data-style-name="a907">6/12/2019</text:date>
+                    </text:span>
+                    <text:span text:style-name="a908" text:class-names="" />
+                </text:p>
+            </draw:text-box>
+            <svg:title />
+            <svg:desc />
+        </draw:frame>
+        <draw:page-thumbnail svg:x="0.75in" svg:y="1.25in" svg:width="6in" svg:height="3.375in" presentation:class="page" draw:id="id7" presentation:style-name="a911" draw:name="Slide Image Placeholder 3" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <svg:title />
+            <svg:desc />
+        </draw:page-thumbnail>
+        <draw:frame draw:id="id8" presentation:style-name="a926" draw:name="Notes Placeholder 4" svg:x="0.75in" svg:y="4.8125in" svg:width="6in" svg:height="3.9375in" presentation:class="notes" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <draw:text-box>
+                <text:p text:style-name="a913" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:span text:style-name="a912" text:class-names="">Click to edit Master text styles</text:span>
+                </text:p>
+                <text:list text:style-name="a916" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:list-item>
+                        <text:list text:style-name="a916">
+                            <text:list-item>
+                                <text:p text:style-name="a915" text:class-names="" text:cond-style-name="">
+                                    <text:span text:style-name="a914" text:class-names="">Second level</text:span>
+                                </text:p>
+                            </text:list-item>
+                        </text:list>
+                    </text:list-item>
+                </text:list>
+                <text:list text:style-name="a919" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:list-item>
+                        <text:list text:style-name="a919">
+                            <text:list-item>
+                                <text:list text:style-name="a919">
+                                    <text:list-item>
+                                        <text:p text:style-name="a918" text:class-names="" text:cond-style-name="">
+                                            <text:span text:style-name="a917" text:class-names="">Third level</text:span>
+                                        </text:p>
+                                    </text:list-item>
+                                </text:list>
+                            </text:list-item>
+                        </text:list>
+                    </text:list-item>
+                </text:list>
+                <text:list text:style-name="a922" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:list-item>
+                        <text:list text:style-name="a922">
+                            <text:list-item>
+                                <text:list text:style-name="a922">
+                                    <text:list-item>
+                                        <text:list text:style-name="a922">
+                                            <text:list-item>
+                                                <text:p text:style-name="a921" text:class-names="" text:cond-style-name="">
+                                                    <text:span text:style-name="a920" text:class-names="">Fourth level</text:span>
+                                                </text:p>
+                                            </text:list-item>
+                                        </text:list>
+                                    </text:list-item>
+                                </text:list>
+                            </text:list-item>
+                        </text:list>
+                    </text:list-item>
+                </text:list>
+                <text:list text:style-name="a925" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:list-item>
+                        <text:list text:style-name="a925">
+                            <text:list-item>
+                                <text:list text:style-name="a925">
+                                    <text:list-item>
+                                        <text:list text:style-name="a925">
+                                            <text:list-item>
+                                                <text:list text:style-name="a925">
+                                                    <text:list-item>
+                                                        <text:p text:style-name="a924" text:class-names="" text:cond-style-name="">
+                                                            <text:span text:style-name="a923" text:class-names="">Fifth level</text:span>
+                                                        </text:p>
+                                                    </text:list-item>
+                                                </text:list>
+                                            </text:list-item>
+                                        </text:list>
+                                    </text:list-item>
+                                </text:list>
+                            </text:list-item>
+                        </text:list>
+                    </text:list-item>
+                </text:list>
+            </draw:text-box>
+            <svg:title />
+            <svg:desc />
+        </draw:frame>
+        <draw:frame draw:id="id9" presentation:style-name="a929" draw:name="Footer Placeholder 5" svg:x="0in" svg:y="9.49826in" svg:width="3.25in" svg:height="0.50174in" presentation:class="footer" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <draw:text-box>
+                <text:p text:style-name="a928" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:span text:style-name="a927" text:class-names="" />
+                </text:p>
+            </draw:text-box>
+            <svg:title />
+            <svg:desc />
+        </draw:frame>
+        <draw:frame draw:id="id10" presentation:style-name="a933" draw:name="Slide Number Placeholder 6" svg:x="4.24826in" svg:y="9.49826in" svg:width="3.25in" svg:height="0.50174in" presentation:class="page-number" presentation:placeholder="false" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0">
+            <draw:text-box>
+                <text:p text:style-name="a932" text:class-names="" text:cond-style-name="" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0">
+                    <text:span text:style-name="a930" text:class-names="">
+                        <text:page-number style:num-format="1" text:fixed="false">‹#›</text:page-number>
+                    </text:span>
+                    <text:span text:style-name="a931" text:class-names="" />
+                </text:p>
+            </draw:text-box>
+            <svg:title />
+            <svg:desc />
+        </draw:frame>
+    </presentation:notes>
+</style:master-page>
