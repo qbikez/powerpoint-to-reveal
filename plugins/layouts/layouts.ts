@@ -57,7 +57,7 @@ export default class LayoutsPlugin {
       const slide = slides[slideIdx] as HTMLElement;
       // check layout class
       const layoutName = slide.dataset.layout;
-      if (!layoutName) return;
+      if (!layoutName) continue;
 
       console.log(`processing slide with layout '${layoutName}'`);
 
