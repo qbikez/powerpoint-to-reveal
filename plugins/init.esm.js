@@ -11,6 +11,7 @@ const layouts = new LayoutsPlugin({
   extractBackgrounds: true,
   backgroundGradient: "linear-gradient(to bottom right, #201d52, #210d40)",
   layoutsDir: "layouts",
+  footer: "my awesome presentation"
 });
 revealOptions.plugins.push(layouts);
 

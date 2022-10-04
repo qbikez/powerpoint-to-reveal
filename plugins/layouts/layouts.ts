@@ -2,11 +2,13 @@ type PropType<TObj, TProp extends keyof TObj> = TObj[TProp];
 
 export default class LayoutsPlugin {
   id = "layouts";
+  private reveal: any;
   public settings = {
     extractBackgrounds: true,
     backgroundGradient: undefined,
     layoutsDir: "html",
     stripUnusedPlaceholders: true,
+    footer: "",
   };
 
   constructor(options: Partial<PropType<LayoutsPlugin, "settings">> = {}) {
@@ -18,6 +20,7 @@ export default class LayoutsPlugin {
 
   init = async (deck) => {
     console.log("my custom plugin!");
+    this.reveal = deck;
 
     deck.on(
       "slidechanged",
@@ -111,29 +114,38 @@ export default class LayoutsPlugin {
     document.head.appendChild(styleNode);
   };
 
-  replaceText = (placeholder: Element, sourceNode: Element) => {
-    const isSingle = sourceNode.children.length == 0;
-
-    const span = placeholder.querySelector("span");
+  replaceText = (placeholder: Element, source: Element | string) => {
     const firstP = placeholder.querySelector("p");
     const div = placeholder.querySelector("div");
+    const isSingle =
+      typeof source === "string" ? true : source.children.length == 0;
+    const innerHtml =
+      typeof source === "string"
+        ? source
+        : isSingle
+        ? source.innerHTML
+        : source.outerHTML;
 
-    // if it's a single node (i.e. h1), we can put it inside Paragraph
-    // TODO: wrap top-level text inside listitems
-    const targetNode = /*span*/ (isSingle && firstP) || div || placeholder;
-    const listItems = sourceNode.querySelectorAll("li");
-    for (let i = 0; i < listItems.length; i++) {
-      const li = listItems[i];
-      for (let c = 0; c < li.childNodes.length; c++) {
-        const child = li.childNodes[c];
-        if (child.nodeName === "#text" && !!child.textContent?.trim()) {
-          const spanWrapper = document.createElement("span");
-          spanWrapper.setAttribute("style", "display: inline-block");
-          li.replaceChild(spanWrapper, child);
-          spanWrapper.appendChild(child);
+    if (typeof source === "string") {
+    } else {
+      const sourceNode = source;
+      // if it's a single node (i.e. h1), we can put it inside Paragraph
+      // TODO: wrap top-level text inside listitems
+      const listItems = sourceNode.querySelectorAll("li");
+      for (let i = 0; i < listItems.length; i++) {
+        const li = listItems[i];
+        for (let c = 0; c < li.childNodes.length; c++) {
+          const child = li.childNodes[c];
+          if (child.nodeName === "#text" && !!child.textContent?.trim()) {
+            const spanWrapper = document.createElement("span");
+            spanWrapper.setAttribute("style", "display: inline-block");
+            li.replaceChild(spanWrapper, child);
+            spanWrapper.appendChild(child);
+          }
         }
       }
     }
+    const targetNode = /*span*/ (isSingle && firstP) || div || placeholder;
 
     const paragraphStyle = (firstP && firstP.getAttribute("style")) || "";
 
@@ -147,9 +159,7 @@ export default class LayoutsPlugin {
       }
     });
 
-    targetNode.innerHTML = isSingle
-      ? sourceNode.innerHTML
-      : sourceNode.outerHTML;
+    targetNode.innerHTML = innerHtml;
 
     if (!isSingle) {
       // we put some paragraphs in, but we need to copy the paragraph style from the layout
@@ -239,9 +249,9 @@ export default class LayoutsPlugin {
       }
     }
 
-    const unusedPlaceholders = placeholders.filter(
-      (p) => !replaced.includes(p)
-    );
+    const unusedPlaceholders = Array.from(
+      layout.querySelectorAll(`[presentation-class]:not([replaced])`)
+    ).filter((p) => !replaced.includes(p));
     const unusedContent = contentOrder.filter(
       (c) => match.filter((m) => m.content == c).length == 0
     );
@@ -305,9 +315,9 @@ export default class LayoutsPlugin {
       }
     }
 
-    const unusedPlaceholders = placeholders.filter(
-      (p) => !replaced.includes(p)
-    );
+    const unusedPlaceholders = Array.from(
+      layout.querySelectorAll(`[presentation-class]:not([replaced])`)
+    ).filter((p) => !replaced.includes(p));
     const unusedContent = contentOrder.filter(
       (c) => match.filter((m) => m.content == c).length == 0
     );
@@ -340,6 +350,15 @@ export default class LayoutsPlugin {
 
     if (footer) {
       (slide as any).footer = footer;
+      this.replaceText(footer, this.settings.footer);
+    }
+
+    const pageNumber = layout.querySelector(
+      "[presentation-class='page-number']"
+    );
+    if (pageNumber) {
+      const slideNo = this.getSlideNumber(slide);
+      this.replaceText(pageNumber, slideNo);
     }
 
     const matchFunction = this.matchByPosition;
@@ -369,6 +388,68 @@ export default class LayoutsPlugin {
     return slide;
   }
 
+  getSlideNumber(slide = this.reveal.getCurrentSlide()) {
+    let config = this.reveal.getConfig();
+    let value;
+    let format = "h.v";
+
+    if (typeof config.slideNumber === "function") {
+      value = config.slideNumber(slide);
+    } else {
+      // Check if a custom number format is available
+      if (typeof config.slideNumber === "string") {
+        format = config.slideNumber;
+      }
+
+      // If there are ONLY vertical slides in this deck, always use
+      // a flattened slide number
+      if (!/c/.test(format) && this.reveal.getHorizontalSlides().length === 1) {
+        format = "c";
+      }
+
+      // Offset the current slide number by 1 to make it 1-indexed
+      let horizontalOffset =
+        slide && slide.dataset.visibility === "uncounted" ? 0 : 1;
+
+      value = [];
+      switch (format) {
+        case "c":
+          value.push(this.reveal.getSlidePastCount(slide) + horizontalOffset);
+          break;
+        case "c/t":
+          value.push(
+            this.reveal.getSlidePastCount(slide) + horizontalOffset,
+            "/",
+            this.reveal.getTotalSlides()
+          );
+          break;
+        default:
+          let indices = this.reveal.getIndices(slide);
+          value.push(indices.h + horizontalOffset);
+          let sep = format === "h/v" ? "/" : ".";
+          if (this.reveal.isVerticalSlide(slide))
+            value.push(sep, indices.v + 1);
+      }
+    }
+
+    let url = "#" + this.reveal.location.getHash(slide);
+    return this.formatNumber(value[0], value[1], value[2], url);
+  }
+
+  formatNumber(a, delimiter, b, url = "#" + this.reveal.location.getHash()) {
+    if (typeof b === "number" && !isNaN(b)) {
+      return `
+					<span class="slide-number-a">${a}</span>
+					<span class="slide-number-delimiter">${delimiter}</span>
+					<span class="slide-number-b">${b}</span>
+					`;
+    } else {
+      return `
+					<span class="slide-number-a">${a}</span>
+					`;
+    }
+  }
+
   processBackground({
     layout,
     deckWidth,
@@ -387,10 +468,10 @@ export default class LayoutsPlugin {
         parseInt(div.parentElement!.style.height) >= deckHeight
     );
     if (backgrouds) {
-      var imgBackgrounds = backgrouds.filter((b) =>
-        b.style.backgroundImage.includes(".jpeg") || b.style.backgroundImage.includes(".png")
+      var selectedBackground = backgrouds.find((b) =>
+        b.style.backgroundImage.includes(".png")
       );
-      const selectedBackground = imgBackgrounds.length && imgBackgrounds[0];
+
       if (selectedBackground) {
         var url = selectedBackground.style.backgroundImage
           .replace('url("', "")
