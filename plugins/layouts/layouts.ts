@@ -7,6 +7,7 @@ export default class LayoutsPlugin {
     extractBackgrounds: true,
     backgroundGradient: undefined,
     stripUnusedPlaceholders: true,
+    enablePageNumbers: true,
     footer: "",
     layoutsDir: "",
     defaultLayouts: {
@@ -16,6 +17,10 @@ export default class LayoutsPlugin {
     },
   };
   private defaultLayoutIdx = {};
+  
+  private defaultLayoutIdx = {
+  };
+
 
   constructor(options: Partial<PropType<LayoutsPlugin, "settings">> = {}) {
     this.settings = {
@@ -170,16 +175,16 @@ export default class LayoutsPlugin {
 
     const paragraphStyle = (firstP && firstP.getAttribute("style")) || "";
 
-    const siblings = Array.from(
-      placeholder.querySelectorAll(targetNode.nodeName)
-    ).filter((s) => s.parentNode == targetNode.parentNode);
-
-    siblings.forEach((s) => {
-      if (s != targetNode) {
-        s.remove();
-      }
-    });
-
+    let currentNode = targetNode;
+    while (currentNode !== placeholder) {
+      Array.from(currentNode.parentNode!.children).forEach(ch => {
+        if (ch !== currentNode) {
+          ch.remove();
+        }
+      });
+      currentNode = currentNode.parentElement!;
+    }
+    
     targetNode.innerHTML = innerHtml;
 
     if (!isSingle) {
@@ -191,6 +196,10 @@ export default class LayoutsPlugin {
         const curStyle = p.getAttribute("style") || "";
         p.setAttribute("style", paragraphStyle + ";" + curStyle);
       });
+    }
+
+    if (innerHtml === '') {
+      placeholder.innerHTML = '';  
     }
 
     placeholder.setAttribute("replaced", "true");
@@ -380,7 +389,7 @@ export default class LayoutsPlugin {
     const pageNumber = layout.querySelector(
       "[presentation-class='page-number']"
     );
-    if (pageNumber) {
+    if (pageNumber && this.settings.enablePageNumbers) {
       const slideNo = this.getSlideNumber(slide);
       this.replaceText(pageNumber, slideNo);
     }
@@ -535,7 +544,8 @@ export default class LayoutsPlugin {
     let slideType: string;
     if (tag) {
       slideType = tag.substring(1);
-    } else {
+    }
+    else {
       slideType = "slide";
       if (
         slideIdx == 0 ||
