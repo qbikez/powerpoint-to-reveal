@@ -18,10 +18,6 @@ export default class LayoutsPlugin {
   };
   private defaultLayoutIdx = {};
   
-  private defaultLayoutIdx = {
-  };
-
-
   constructor(options: Partial<PropType<LayoutsPlugin, "settings">> = {}) {
     this.settings = {
       ...this.settings,
