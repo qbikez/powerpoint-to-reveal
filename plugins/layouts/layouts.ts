@@ -6,16 +6,26 @@ export default class LayoutsPlugin {
   public settings = {
     extractBackgrounds: true,
     backgroundGradient: undefined,
-    layoutsDir: "html",
     stripUnusedPlaceholders: true,
     footer: "",
+    layoutsDir: "",
+    defaultLayouts: {
+      slide: [],
+      title: [],
+      sectionTitle: [],
+    },
   };
+  private defaultLayoutIdx = {};
 
   constructor(options: Partial<PropType<LayoutsPlugin, "settings">> = {}) {
     this.settings = {
       ...this.settings,
       ...options,
     };
+
+    Object.keys(this.settings.defaultLayouts).forEach(
+      (k) => (this.defaultLayoutIdx[k] = 0)
+    );
   }
 
   init = async (deck) => {
@@ -24,13 +34,7 @@ export default class LayoutsPlugin {
 
     deck.on(
       "slidechanged",
-      ({ indexh, indexv, previousSlide, currentSlide, origin }) => {
-        // TODO: put the footer outside of slides deck, so it doesn't move with slides
-        // make sure it dissapears when a slide has no footer
-        // make sure it works for the first slide, after load
-        console.log("slide changed. footer:");
-        console.dir(currentSlide.footer);
-      }
+      ({ indexh, indexv, previousSlide, currentSlide, origin }) => {}
     );
 
     this.addStyle(`
@@ -52,11 +56,12 @@ export default class LayoutsPlugin {
 
     const deckWidth = deck.getConfig().width;
     const deckHeight = deck.getConfig().height;
-
     for (let slideIdx = 0; slideIdx < slides.length; slideIdx++) {
       const slide = slides[slideIdx] as HTMLElement;
-      // check layout class
-      const layoutName = slide.dataset.layout;
+
+      let layoutName = slide.dataset.layout;
+      if (!layoutName || layoutName.startsWith(":"))
+        layoutName = this.findDefaultLayout(slide, slideIdx, layoutName);
       if (!layoutName) continue;
 
       console.log(`processing slide with layout '${layoutName}'`);
@@ -84,13 +89,7 @@ export default class LayoutsPlugin {
       const layout = doc.body;
 
       this.applyLayout({ deckWidth, deckHeight, layout, slide });
-      // load layout html file
-      // For each child node in slide:
-      //   check if layout has placeholder for this node (i.e. {h1})
-      //   yes - put the node content into placeholder and remove the original node
-      //   no - keep the node content as 'slide text' and remove the original node
-      // Put the 'slide text' into it's corresponding placeholder or at the end of slide
-      // Replace slide content with processed layout content
+      //deck.syncSlide(slide);
     }
 
     console.log("layouts applied");
@@ -117,8 +116,49 @@ export default class LayoutsPlugin {
   replaceText = (placeholder: Element, source: Element | string) => {
     const firstP = placeholder.querySelector("p");
     const div = placeholder.querySelector("div");
-    const isSingle =
-      typeof source === "string" ? true : source.children.length == 0;
+
+    if (typeof source !== "string") {
+      const sourceNode = source;
+
+      const wrapListItems = (container: Element) => {
+        const listItems = container.querySelectorAll("li");
+        for (let i = 0; i < listItems.length; i++) {
+          const li = listItems[i];
+          for (let c = 0; c < li.childNodes.length; c++) {
+            const child = li.childNodes[c];
+            if (child.nodeName === "#text" && !!child.textContent?.trim()) {
+              const spanWrapper = document.createElement("span");
+              spanWrapper.setAttribute("style", "display: inline-block");
+              li.replaceChild(spanWrapper, child);
+              spanWrapper.appendChild(child);
+            }
+          }
+        }
+      };
+
+      wrapListItems(sourceNode);
+
+      const uwrapParagraph = (container: Element) => {
+        const p =
+          container.children.length == 1 &&
+          container.children[0].nodeName == "P" &&
+          container.children[0];
+
+        if (!p) return;
+
+        Array.from(p.children).forEach((ch) => {
+          p.removeChild(ch);
+          p.parentNode?.appendChild(ch);
+        });
+        p.remove();
+      };
+
+      if (sourceNode.classList.contains("no-wrap")) {
+        uwrapParagraph(sourceNode);
+      }
+    }
+
+    const isSingle = typeof source === "string" || source.children.length == 0;
     const innerHtml =
       typeof source === "string"
         ? source
@@ -126,25 +166,6 @@ export default class LayoutsPlugin {
         ? source.innerHTML
         : source.outerHTML;
 
-    if (typeof source === "string") {
-    } else {
-      const sourceNode = source;
-      // if it's a single node (i.e. h1), we can put it inside Paragraph
-      // TODO: wrap top-level text inside listitems
-      const listItems = sourceNode.querySelectorAll("li");
-      for (let i = 0; i < listItems.length; i++) {
-        const li = listItems[i];
-        for (let c = 0; c < li.childNodes.length; c++) {
-          const child = li.childNodes[c];
-          if (child.nodeName === "#text" && !!child.textContent?.trim()) {
-            const spanWrapper = document.createElement("span");
-            spanWrapper.setAttribute("style", "display: inline-block");
-            li.replaceChild(spanWrapper, child);
-            spanWrapper.appendChild(child);
-          }
-        }
-      }
-    }
     const targetNode = /*span*/ (isSingle && firstP) || div || placeholder;
 
     const paragraphStyle = (firstP && firstP.getAttribute("style")) || "";
@@ -162,8 +183,8 @@ export default class LayoutsPlugin {
     targetNode.innerHTML = innerHtml;
 
     if (!isSingle) {
-      // we put some paragraphs in, but we need to copy the paragraph style from the layout
-      // would probably be better to have a CSS rule instead of inline style
+      // if there's any inline style in the layout, we need to copy it
+      // TODO: is there any? or is everything in the stylesheet.
       const children = targetNode.querySelectorAll("p,li");
 
       children.forEach((p) => {
@@ -259,7 +280,11 @@ export default class LayoutsPlugin {
     return { match, unusedPlaceholders, unusedContent };
   }
 
-  matchByPosition(layout: HTMLElement, slide: HTMLElement) {
+  matchByPosition(
+    layout: HTMLElement,
+    content: Element[],
+    placeholderFilters = ["title", "subtitle", "outline", "object"]
+  ) {
     const pixelValue = (v: string) =>
       parseFloat(/([0-9\.]+)/.exec(v)?.[0] || "");
     const byLeft = (a: HTMLElement, b: HTMLElement) =>
@@ -279,7 +304,6 @@ export default class LayoutsPlugin {
         ? 1
         : 0;
 
-    const placeholderFilters = ["title", "subtitle", "outline", "object"];
     const placeholders = (
       Array.from(
         layout.querySelectorAll("[presentation-class]")
@@ -302,7 +326,7 @@ export default class LayoutsPlugin {
       return notReplaced[0];
     };
 
-    const contentOrder = Array.from(slide.children);
+    const contentOrder = Array.from(content);
     const match: Array<{ placeholder: Element; content: Element }> = [];
 
     for (let i = 0; i < contentOrder.length; i++) {
@@ -362,12 +386,25 @@ export default class LayoutsPlugin {
     }
 
     const matchFunction = this.matchByPosition;
-    const { match, unusedPlaceholders, unusedContent } = matchFunction(
+    const { match } = matchFunction(
       layout,
-      slide
+      Array.from(slide.children).filter((c) => !c.classList.contains("graphic"))
     );
 
     match.forEach(({ placeholder, content }) => {
+      this.replaceText(placeholder, content);
+      content.remove();
+    });
+
+    const {
+      match: matchedGraphic,
+      unusedContent,
+      unusedPlaceholders,
+    } = matchFunction(layout, Array.from(slide.querySelectorAll(".graphic")), [
+      "graphic",
+    ]);
+
+    matchedGraphic.forEach(({ placeholder, content }) => {
       this.replaceText(placeholder, content);
       content.remove();
     });
@@ -479,10 +516,44 @@ export default class LayoutsPlugin {
         slide.setAttribute("data-background-image", url);
       }
 
-      //deck.syncSlide(slide);
       backgrouds.forEach((b) => {
         b.remove();
       });
     }
+  }
+
+  findDefaultLayout(
+    slide: HTMLElement,
+    slideIdx: number,
+    tag?: string
+  ): string | undefined {
+    const isVerticalParent =
+      slide.children.length > 0 && slide.children[0].nodeName === "SECTION";
+    if (isVerticalParent) return undefined;
+
+    // TODO: choose the right default kind (slide/title/sectiontitle)
+    let slideType: string;
+    if (tag) {
+      slideType = tag.substring(1);
+    } else {
+      slideType = "slide";
+      if (
+        slideIdx == 0 ||
+        (slide.children.length == 1 && slide.children[0].nodeName == "H1")
+      )
+        slideType = "title";
+      else if (slide.children.length == 1 && slide.children[0].nodeName == "H2")
+        slideType = "sectionTitle";
+    }
+
+    const defaults = this.settings.defaultLayouts?.[slideType];
+    if (!defaults?.length) return undefined;
+
+    const idx = this.defaultLayoutIdx[slideType];
+
+    const layoutName = defaults[idx];
+    this.defaultLayoutIdx[slideType] = (idx + 1) % defaults.length;
+
+    return layoutName;
   }
 }
