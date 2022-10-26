@@ -7,6 +7,7 @@ export default class LayoutsPlugin {
     extractBackgrounds: true,
     backgroundGradient: undefined,
     stripUnusedPlaceholders: true,
+    stripUnusedContent: false,
     enablePageNumbers: true,
     footer: "",
     layoutsDir: "",
@@ -17,7 +18,7 @@ export default class LayoutsPlugin {
     },
   };
   private defaultLayoutIdx = {};
-  
+
   constructor(options: Partial<PropType<LayoutsPlugin, "settings">> = {}) {
     this.settings = {
       ...this.settings,
@@ -60,10 +61,10 @@ export default class LayoutsPlugin {
     for (let slideIdx = 0; slideIdx < slides.length; slideIdx++) {
       const slide = slides[slideIdx] as HTMLElement;
 
-      let layoutName = slide.dataset.layout;
-      if (!layoutName || layoutName.startsWith(":"))
-        layoutName = this.findDefaultLayout(slide, slideIdx, layoutName);
+      const layoutName = this.findDefaultLayout(slide, slideIdx);
       if (!layoutName) continue;
+
+      const slideType = this.getSlideType(slide, slideIdx);
 
       console.log(`processing slide with layout '${layoutName}'`);
 
@@ -89,7 +90,7 @@ export default class LayoutsPlugin {
       var doc = parser.parseFromString(html, "text/html");
       const layout = doc.body;
 
-      this.applyLayout({ deckWidth, deckHeight, layout, slide });
+      this.applyLayout({ deckWidth, deckHeight, layout, slide, slideType });
       //deck.syncSlide(slide);
     }
 
@@ -139,7 +140,7 @@ export default class LayoutsPlugin {
 
       wrapListItems(sourceNode);
 
-      const uwrapParagraph = (container: Element) => {
+      const unwrapParagraph = (container: Element) => {
         const p =
           container.children.length == 1 &&
           container.children[0].nodeName == "P" &&
@@ -154,9 +155,16 @@ export default class LayoutsPlugin {
         p.remove();
       };
 
-      if (sourceNode.classList.contains("no-wrap")) {
-        uwrapParagraph(sourceNode);
-      }
+      const unwrapRecursive = (node: Element) => {
+        if (node.classList.contains("no-wrap")) {
+          unwrapParagraph(node);
+        }
+        Array.from(node.children).forEach((ch) => {
+          unwrapRecursive(ch);
+        });
+      };
+
+      unwrapRecursive(sourceNode);
     }
 
     const isSingle = typeof source === "string" || source.children.length == 0;
@@ -173,14 +181,14 @@ export default class LayoutsPlugin {
 
     let currentNode = targetNode;
     while (currentNode !== placeholder) {
-      Array.from(currentNode.parentNode!.children).forEach(ch => {
+      Array.from(currentNode.parentNode!.children).forEach((ch) => {
         if (ch !== currentNode) {
           ch.remove();
         }
       });
       currentNode = currentNode.parentElement!;
     }
-    
+
     targetNode.innerHTML = innerHtml;
 
     if (!isSingle) {
@@ -194,17 +202,21 @@ export default class LayoutsPlugin {
       });
     }
 
-    if (innerHtml === '') {
-      placeholder.innerHTML = '';  
+    if (innerHtml === "") {
+      placeholder.innerHTML = "";
     }
 
     placeholder.setAttribute("replaced", "true");
   };
 
-  matchByOrder(layout: HTMLElement, slide: HTMLElement) {
+  matchByOrder(
+    layout: HTMLElement,
+    content: Element[],
+    placeholderFilters = ["title", "subtitle", "outline", "object"]
+  ) {
     const placeholderOrder = ["title", "subtitle", "outline", "object"];
     const placeholderFilter = {
-      title: ["h1"],
+      title: ["h1", "h2"],
       subtitle: ["h1", "h2"],
       outline: ["*"],
       object: ["*"],
@@ -253,8 +265,8 @@ export default class LayoutsPlugin {
 
     let contentOrder: Element[] = [];
 
-    for (let i = 0; i < slide.children.length; i++) {
-      const child = slide.children[i];
+    for (let i = 0; i < content.length; i++) {
+      const child = content[i];
       contentOrder.push(child);
     }
 
@@ -359,20 +371,28 @@ export default class LayoutsPlugin {
     deckHeight,
     layout,
     slide,
+    slideType,
   }: {
     deckWidth: number;
     deckHeight: number;
     layout: HTMLElement;
     slide: HTMLElement;
+    slideType?: string;
   }) {
-    if (this.settings.extractBackgrounds) {
+    const extractBackgrounds =
+      slide.dataset.extractbackground !== undefined
+        ? slide.dataset.extractbackground === "true"
+        : this.settings.extractBackgrounds;
+    if (extractBackgrounds) {
       this.processBackground({ slide, layout, deckWidth, deckHeight });
     }
-    if (this.settings.backgroundGradient) {
-      slide.setAttribute(
-        "data-background-gradient",
-        this.settings.backgroundGradient
-      );
+    const backgroundGradient =
+      slide.dataset.backgroundgradient !== undefined
+        ? slide.dataset.backgroundgradient
+        : this.settings.backgroundGradient;
+
+    if (backgroundGradient && !slide.dataset.background) {
+      slide.setAttribute("data-background-gradient", backgroundGradient);
     }
 
     const footer = layout.querySelector("[presentation-class='footer']");
@@ -390,7 +410,10 @@ export default class LayoutsPlugin {
       this.replaceText(pageNumber, slideNo);
     }
 
-    const matchFunction = this.matchByPosition;
+    const matchFunction =
+      slideType === "title" || slideType === "sectionTitle"
+        ? this.matchByOrder
+        : this.matchByPosition;
     const { match } = matchFunction(
       layout,
       Array.from(slide.children).filter((c) => !c.classList.contains("graphic"))
@@ -414,9 +437,11 @@ export default class LayoutsPlugin {
       content.remove();
     });
 
-    unusedContent.forEach((c) => {
-      c.remove();
-    });
+    if (this.settings.stripUnusedContent) {
+      unusedContent.forEach((c) => {
+        c.remove();
+      });
+    }
 
     if (this.settings.stripUnusedPlaceholders) {
       unusedPlaceholders.forEach((p) => {
@@ -527,21 +552,18 @@ export default class LayoutsPlugin {
     }
   }
 
-  findDefaultLayout(
-    slide: HTMLElement,
-    slideIdx: number,
-    tag?: string
-  ): string | undefined {
+  getSlideType(slide: HTMLElement, slideIdx: number) {
+    const tag = slide.dataset.layout?.startsWith(":") && slide.dataset.layout;
+    if (slide.dataset.layout && !tag) return undefined;
+
     const isVerticalParent =
       slide.children.length > 0 && slide.children[0].nodeName === "SECTION";
     if (isVerticalParent) return undefined;
 
-    // TODO: choose the right default kind (slide/title/sectiontitle)
     let slideType: string;
     if (tag) {
       slideType = tag.substring(1);
-    }
-    else {
+    } else {
       slideType = "slide";
       if (
         slideIdx == 0 ||
@@ -551,6 +573,14 @@ export default class LayoutsPlugin {
       else if (slide.children.length == 1 && slide.children[0].nodeName == "H2")
         slideType = "sectionTitle";
     }
+
+    return slideType;
+  }
+
+  findDefaultLayout(slide: HTMLElement, slideIdx: number): string | undefined {
+    const slideType = this.getSlideType(slide, slideIdx);
+
+    if (!slideType) return slide.dataset.layout;
 
     const defaults = this.settings.defaultLayouts?.[slideType];
     if (!defaults?.length) return undefined;

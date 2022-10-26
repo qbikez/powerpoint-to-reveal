@@ -5,6 +5,8 @@
   "main": "layouts.mjs",
   "scripts": {
     "build": "tsc --project tsconfig.json",
+    "prewatch": "npm run build",
+    "watch": "tsc --project tsconfig.json --watch",
     "test": "jest --watch"
   },
   "type": "module",
